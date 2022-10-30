@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33020.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icarus_Service_and_Repair_Tracker", "Icarus_Service_and_Repair_Tracker.csproj", "{123B7511-5CF0-4FF8-BD16-2E3F2B1691FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{123B7511-5CF0-4FF8-BD16-2E3F2B1691FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123B7511-5CF0-4FF8-BD16-2E3F2B1691FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123B7511-5CF0-4FF8-BD16-2E3F2B1691FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123B7511-5CF0-4FF8-BD16-2E3F2B1691FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E427CD90-C321-4D72-914C-60F082271FCB}
+	EndGlobalSection
+EndGlobal
