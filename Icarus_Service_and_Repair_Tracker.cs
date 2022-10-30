@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Icarus_Service_and_Repair_Tracker
 {
-    public partial class Form1 : Form
+    public partial class Icarus_Service_and_Repair_Tracker : Form
     {
-        public Form1()
+        public Icarus_Service_and_Repair_Tracker()
         {
             InitializeComponent();
         }

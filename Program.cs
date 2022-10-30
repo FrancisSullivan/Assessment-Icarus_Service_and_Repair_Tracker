@@ -16,7 +16,7 @@ namespace Icarus_Service_and_Repair_Tracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Icarus_Service_and_Repair_Tracker());
         }
     }
 }
