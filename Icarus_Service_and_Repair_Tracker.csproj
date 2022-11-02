@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Drone.cs" />
     <Compile Include="Icarus_Service_and_Repair_Tracker.cs">
       <SubType>Form</SubType>
     </Compile>
