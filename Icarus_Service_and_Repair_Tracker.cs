@@ -70,6 +70,7 @@ namespace Icarus_Service_and_Repair_Tracker
             }
             AddNewItem();
             ClearTextBoxes();
+            toolStripStatusLabel.Text = "Record added";
         }
         private Boolean BlankCheck()
         {
@@ -172,6 +173,8 @@ namespace Icarus_Service_and_Repair_Tracker
         private void ListViewRegularQueue_Click(object sender, EventArgs e)
         {
             TextBoxUpdate(RegularService, ListViewRegularQueue);
+            toolStripStatusLabel.Text =
+                "Record selected. Attributes displayed above.";
         }
         private void TextBoxUpdate(Queue<Drone> selectedQueue,
             System.Windows.Forms.ListView selectedListView)
@@ -197,6 +200,8 @@ namespace Icarus_Service_and_Repair_Tracker
         private void ListViewExpressQueue_Click(object sender, EventArgs e)
         {
             TextBoxUpdate(ExpressService, ListViewExpressQueue);
+            toolStripStatusLabel.Text =
+                "Record selected. Attributes displayed above.";
         }
         private void ListViewExpressQueue_MouseHover(
             object sender, EventArgs e)
@@ -210,6 +215,8 @@ namespace Icarus_Service_and_Repair_Tracker
         {
             MoveToListBox(RegularService);
             UpdateListViewRegularQueue();
+            toolStripStatusLabel.Text =
+                "Record dequeued. Moved to 'Finished Service Items'.";
         }
         private void MoveToListBox(Queue<Drone> selectedQueue)
         {
@@ -229,6 +236,8 @@ namespace Icarus_Service_and_Repair_Tracker
         {
             MoveToListBox(ExpressService);
             UpdateListViewExpressQueue();
+            toolStripStatusLabel.Text =
+                "Record dequeued. Moved to 'Finished Service Items'.";
         }
         #endregion
         #region 6.16 Double-click remove item from listbox and list
@@ -239,11 +248,17 @@ namespace Icarus_Service_and_Repair_Tracker
             ListBoxFinishedItems.Items.RemoveAt(currentItem);
             FinishedList.RemoveAt(currentItem);
             UpdateListBox();
+            toolStripStatusLabel.Text = "Item removed";
         }
         private void ListBoxFinishedItems_MouseHover(object sender, EventArgs e)
         {
             ToolTip.SetToolTip(ListBoxFinishedItems,
                 "Double-click to remove item");
+        }
+        private void ListBoxFinishedItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            toolStripStatusLabel.Text =
+                "Item selected. 'Double-click' to remove.";
         }
         #endregion
         #region 6.17 Method to clear textboxes
@@ -270,6 +285,7 @@ namespace Icarus_Service_and_Repair_Tracker
         private void TextBoxClientName_DoubleClick(object sender, EventArgs e)
         {
             ClearTextBoxes();
+            toolStripStatusLabel.Text = "Fields cleared";
         }
         #endregion
         #region UpdateListBox
