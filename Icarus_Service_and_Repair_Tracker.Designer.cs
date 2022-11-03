@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ListViewRegularQueue = new System.Windows.Forms.ListView();
             this.clientName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.droneModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,7 +53,7 @@
             this.ButtonDequeueRegular = new System.Windows.Forms.Button();
             this.ButtonDequeueExpress = new System.Windows.Forms.Button();
             this.ButtonAdd = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.TextBoxServiceCost = new System.Windows.Forms.TextBox();
             this.ListViewExpressQueue = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -61,6 +62,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NumericUpDownServiceTag = new System.Windows.Forms.NumericUpDown();
+            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.GroupBoxServicePriority.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDownServiceTag)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +75,7 @@
             this.serviceProblem,
             this.serviceCost,
             this.serviceTag});
+            this.ListViewRegularQueue.FullRowSelect = true;
             this.ListViewRegularQueue.HideSelection = false;
             this.ListViewRegularQueue.Location = new System.Drawing.Point(29, 190);
             this.ListViewRegularQueue.Name = "ListViewRegularQueue";
@@ -81,6 +84,7 @@
             this.ListViewRegularQueue.UseCompatibleStateImageBehavior = false;
             this.ListViewRegularQueue.View = System.Windows.Forms.View.Details;
             this.ListViewRegularQueue.Click += new System.EventHandler(this.ListViewRegularQueue_Click);
+            this.ListViewRegularQueue.MouseHover += new System.EventHandler(this.ListViewRegularQueue_MouseHover);
             // 
             // clientName
             // 
@@ -134,6 +138,7 @@
             this.ListBoxFinishedItems.Size = new System.Drawing.Size(389, 704);
             this.ListBoxFinishedItems.TabIndex = 4;
             this.ListBoxFinishedItems.DoubleClick += new System.EventHandler(this.ListBoxFinishedItems_DoubleClick);
+            this.ListBoxFinishedItems.MouseHover += new System.EventHandler(this.ListBoxFinishedItems_MouseHover);
             // 
             // label3
             // 
@@ -195,6 +200,8 @@
             this.TextBoxClientName.Name = "TextBoxClientName";
             this.TextBoxClientName.Size = new System.Drawing.Size(178, 31);
             this.TextBoxClientName.TabIndex = 1;
+            this.TextBoxClientName.DoubleClick += new System.EventHandler(this.TextBoxClientName_DoubleClick);
+            this.TextBoxClientName.MouseHover += new System.EventHandler(this.TextBoxClientName_MouseHover);
             // 
             // TextBoxServiceProblem
             // 
@@ -274,14 +281,14 @@
             this.ButtonAdd.UseVisualStyleBackColor = true;
             this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
-            // statusStrip1
+            // statusStrip
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 924);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1449, 22);
-            this.statusStrip1.TabIndex = 63;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.statusStrip.Location = new System.Drawing.Point(0, 924);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(1449, 22);
+            this.statusStrip.TabIndex = 63;
+            this.statusStrip.Text = "statusStrip1";
             // 
             // TextBoxServiceCost
             // 
@@ -289,6 +296,7 @@
             this.TextBoxServiceCost.Name = "TextBoxServiceCost";
             this.TextBoxServiceCost.Size = new System.Drawing.Size(143, 31);
             this.TextBoxServiceCost.TabIndex = 4;
+            this.TextBoxServiceCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxServiceCost_KeyPress);
             // 
             // ListViewExpressQueue
             // 
@@ -298,6 +306,7 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.ListViewExpressQueue.FullRowSelect = true;
             this.ListViewExpressQueue.HideSelection = false;
             this.ListViewExpressQueue.Location = new System.Drawing.Point(29, 560);
             this.ListViewExpressQueue.Name = "ListViewExpressQueue";
@@ -306,6 +315,7 @@
             this.ListViewExpressQueue.UseCompatibleStateImageBehavior = false;
             this.ListViewExpressQueue.View = System.Windows.Forms.View.Details;
             this.ListViewExpressQueue.Click += new System.EventHandler(this.ListViewExpressQueue_Click);
+            this.ListViewExpressQueue.MouseHover += new System.EventHandler(this.ListViewExpressQueue_MouseHover);
             // 
             // columnHeader1
             // 
@@ -367,7 +377,7 @@
             this.Controls.Add(this.NumericUpDownServiceTag);
             this.Controls.Add(this.ListViewExpressQueue);
             this.Controls.Add(this.TextBoxServiceCost);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.ButtonDequeueExpress);
             this.Controls.Add(this.ButtonDequeueRegular);
@@ -416,7 +426,7 @@
         private System.Windows.Forms.Button ButtonDequeueRegular;
         private System.Windows.Forms.Button ButtonDequeueExpress;
         private System.Windows.Forms.Button ButtonAdd;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.TextBox TextBoxServiceCost;
         private System.Windows.Forms.ColumnHeader clientName;
         private System.Windows.Forms.ColumnHeader droneModel;
@@ -430,6 +440,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.NumericUpDown NumericUpDownServiceTag;
+        private System.Windows.Forms.ToolTip ToolTip;
     }
 }
 

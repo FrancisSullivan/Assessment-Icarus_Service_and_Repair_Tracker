@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 #endregion
 // Francis Sullivan 30034007
 // AT3 2022.11.
@@ -41,9 +42,10 @@ namespace Icarus_Service_and_Repair_Tracker
         }
         #endregion
         #region Getters
+        TextInfo textInfo = new CultureInfo("en-AU", false).TextInfo;
         public string GetClientName()
         {
-            return clientName;
+            return textInfo.ToTitleCase(clientName);
         }
         public string GetDroneModel()
         {
@@ -51,7 +53,8 @@ namespace Icarus_Service_and_Repair_Tracker
         }
         public string GetServiceProblem()
         {
-            return serviceProblem;
+            return serviceProblem[0].ToString().ToUpper() + 
+                serviceProblem.Substring(1) + ".";
         }
         public string GetServiceCost()
         {
