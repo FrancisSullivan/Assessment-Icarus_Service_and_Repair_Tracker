@@ -63,7 +63,9 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NumericUpDownServiceTag = new System.Windows.Forms.NumericUpDown();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.GroupBoxServicePriority.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDownServiceTag)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,6 +139,7 @@
             this.ListBoxFinishedItems.Name = "ListBoxFinishedItems";
             this.ListBoxFinishedItems.Size = new System.Drawing.Size(389, 704);
             this.ListBoxFinishedItems.TabIndex = 4;
+            this.ListBoxFinishedItems.SelectedIndexChanged += new System.EventHandler(this.ListBoxFinishedItems_SelectedIndexChanged);
             this.ListBoxFinishedItems.DoubleClick += new System.EventHandler(this.ListBoxFinishedItems_DoubleClick);
             this.ListBoxFinishedItems.MouseHover += new System.EventHandler(this.ListBoxFinishedItems_MouseHover);
             // 
@@ -284,6 +287,8 @@
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 924);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1449, 22);
@@ -369,6 +374,11 @@
             0,
             0});
             // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 12);
+            // 
             // Icarus_Service_and_Repair_Tracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -399,6 +409,8 @@
             this.Text = "Icarus_Service_and_Repair_Tracker";
             this.GroupBoxServicePriority.ResumeLayout(false);
             this.GroupBoxServicePriority.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDownServiceTag)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -441,6 +453,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.NumericUpDown NumericUpDownServiceTag;
         private System.Windows.Forms.ToolTip ToolTip;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
     }
 }
 
